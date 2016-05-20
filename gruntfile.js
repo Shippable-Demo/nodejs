@@ -1,4 +1,3 @@
-require("xunit-file");
 
 module.exports = function (grunt) {
  grunt.initConfig({
@@ -12,7 +11,8 @@ module.exports = function (grunt) {
    mochaTest: {
      test: {
        options: {
-         reporter: 'xunit-file'
+         reporter: 'xunit'
+         captureFile: "shippable/testresults/result.xml"
        },
        src: ["./test.js"]
      }
