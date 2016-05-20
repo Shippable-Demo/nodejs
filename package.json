@@ -33,6 +33,6 @@
     "grunt-mocha-test": "^0.12.7",
     "mocha": "^1.18.2",
     "superagent": "^0.18.0",
-    "xunit-file": "0.0.5"
+    "spec-xunit-file": "0.0.1-3"
   }
 }
