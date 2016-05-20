@@ -9,18 +9,15 @@ module.exports = function (grunt) {
        }
      }
    },
-   simplemocha: {
-     options: {
-       globals: ["should"],
-       timeout: 3000,
-       ignoreLeaks: false,
-       ui: "bdd",
-       reporter: "xunit-file"
-     },
-     all: { src: ["./test.js"] }
-   }
+   mochaTest: {
+    test: {
+      options: {
+        reporter: 'xunit-file'
+      },
+      src: ["./test.js"]
+    }
  });
  grunt.loadNpmTasks("grunt-express-server");
- grunt.loadNpmTasks("grunt-simple-mocha");
- grunt.registerTask("default", ["express:test", "simplemocha:all"]);
+ grunt.loadNpmTasks("grunt-mocha-test");
+ grunt.registerTask("default", ["express:test", "mochaTest"]);
 };
