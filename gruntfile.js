@@ -10,12 +10,13 @@ module.exports = function (grunt) {
      }
    },
    mochaTest: {
-    test: {
-      options: {
-        reporter: 'xunit-file'
-      },
-      src: ["./test.js"]
-    }
+     test: {
+       options: {
+         reporter: 'xunit-file'
+       },
+       src: ["./test.js"]
+     }
+   }
  });
  grunt.loadNpmTasks("grunt-express-server");
  grunt.loadNpmTasks("grunt-mocha-test");
