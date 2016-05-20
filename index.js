@@ -3,7 +3,7 @@ var express = require("express"),
 
 var connection = null;
 app.get("/", function (req, res) {
-  res.send("Welcome 2 Shippable");
+  res.send("Welcome to Shippable");
 });
 
 app.listen(3000, function () {
